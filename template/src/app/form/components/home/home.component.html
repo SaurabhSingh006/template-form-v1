@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>Different input styling</h1>
+    <form  [formGroup]="formInput">
+        <app-input placeholder="First name" [control]="formInput.controls.firstname" inputType="text"></app-input> 
+        
+        <app-input placeholder="Email" [control]="formInput.controls.email" inputType="email"></app-input>
+        <app-input inputType="text" placeholder="PAN No" [control]="formInput.controls.panNo"></app-input>
+        <app-input inputType="date" placeholder="Date of birth" [control]="formInput.controls.DOB"></app-input>
+        <app-input placeholder="Quantity" [control]="formInput.controls.quantity" inputType="number"></app-input>
+        <app-select label="Gender" placeholder="Choose your gender" [control]="formInput.controls.gender"></app-select>
+        <!-- <app-input inputType="file"></app-input>
+        <app-input inputType="checkbox"></app-input>
+        <app-input inputType="image"></app-input>
+        <app-input inputType="password"></app-input>
+        <app-input inputType="radio"></app-input>
+        <app-input inputType="range"></app-input>
+        <app-input inputType="reset"></app-input>
+        <app-input inputType="submit"></app-input>
+        <app-input inputType="tel"></app-input>
+        <app-input inputType="time"></app-input>
+        <app-input inputType="url"></app-input>
+        <app-input inputType="week"></app-input> -->
+    </form>
+</div>
+
+<br><br><br>
+
+{{ formInput.value | json }}
+
+{{ formInput.controls.firstname.errors | json }}
+
+IS FORM VALID
+{{ formInput.valid | json }}

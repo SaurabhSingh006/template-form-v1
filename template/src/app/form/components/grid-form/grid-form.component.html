@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 style="text-align: center;">Grid form</h1>
+    <form [formGroup]="gridForm">
+        <app-input [control]="gridForm.get('fullname')" placeholder="Full Name" inputType="text"></app-input>
+        <div class="grid3">
+            <app-input [control]="gridForm.get('nationality')" placeholder="Nationality" inputType="text"></app-input>
+            <app-input [control]="gridForm.get('location')" placeholder="Location" inputType="text"></app-input>
+            <app-input [control]="gridForm.get('DOB')" placeholder="Date of Birth" inputType="date"></app-input>
+
+            <app-select [control]="gridForm.get('gender')" label="Gender" placeholder="Please select your gender"></app-select>
+            <app-input [control]="gridForm.get('position')" placeholder="Position" inputType="text"></app-input>
+            <app-input [control]="gridForm.get('passport')" placeholder="Passport" inputType="text"></app-input>
+        </div>
+        <div class="grid2">
+            <app-input [control]="gridForm.get('email')" placeholder="Email" inputType="email"></app-input>
+            <app-input [control]="gridForm.get('address')" placeholder="Address" inputType="text"></app-input>
+        </div>
+    </form>
+</div>
+
+<br><br><br><br><br><br>
+
+Form value in json format
+<br>
+{{ gridForm.value | json }}
